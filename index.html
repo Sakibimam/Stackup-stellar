@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Stackup</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="./src/index.css" />
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body> 
+    <main class="stack-game__container" id="mainContainer">
+      <header class="stack-game__header">
+        <button id="connectWalletBtn" class="stack-game__button">
+          Connect Wallet
+        </button>
+        <!-- Wallet address will be displayed here when connected -->
+        <div id="walletDisplay" class="wallet-display" style="display: none;"></div>
+      </header>
+      
+      <canvas class="stack-game__webgl"></canvas>
+      <p class="stack-game__score">0</p>
+
+      <article class="stack-game__menu">
+        <div class="stack-game__menu-wrapper">
+          <h2 class="stack-game__title">Stackup</h2>
+          <h3 class="stack-game__last-score">Last Score: 0</h3>
+          <button
+            id="playbtn"
+            class="stack-game__button"
+            aria-label="play button"
+          >
+            Play
+          </button>
+        </div>
+      </article>
+    </main>
+
+    <script type="module" src="./src/index.ts"></script>
+  </body>
+</html>
